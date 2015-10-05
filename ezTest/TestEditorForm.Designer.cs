@@ -89,6 +89,7 @@
             // 
             this.menuItem2.Index = 1;
             this.menuItem2.Text = "Открыть тест...";
+            this.menuItem2.Click += new System.EventHandler(this.menuItem2_Click);
             // 
             // menuItem3
             // 
@@ -99,11 +100,13 @@
             // 
             this.menuItem5.Index = 3;
             this.menuItem5.Text = "Сохранить тест...";
+            this.menuItem5.Click += new System.EventHandler(this.menuItem5_Click);
             // 
             // menuItem6
             // 
             this.menuItem6.Index = 4;
             this.menuItem6.Text = "Сохранить тест как...";
+            this.menuItem6.Click += new System.EventHandler(this.menuItem6_Click);
             // 
             // menuItem7
             // 
@@ -212,6 +215,7 @@
             this.button1.TabIndex = 10;
             this.button1.Text = "Добавить вопрос";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -222,6 +226,7 @@
             this.button2.TabIndex = 11;
             this.button2.Text = "Редактировать вопрос";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -232,6 +237,7 @@
             this.button3.TabIndex = 12;
             this.button3.Text = "Удалить вопрос";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // dataGridView1
             // 
@@ -259,7 +265,7 @@
             this.dataGridView1.ShowCellToolTips = false;
             this.dataGridView1.ShowEditingIcon = false;
             this.dataGridView1.ShowRowErrors = false;
-            this.dataGridView1.Size = new System.Drawing.Size(455, 286);
+            this.dataGridView1.Size = new System.Drawing.Size(455, 296);
             this.dataGridView1.TabIndex = 13;
             // 
             // Column1
@@ -282,7 +288,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(465, 499);
+            this.ClientSize = new System.Drawing.Size(465, 500);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);

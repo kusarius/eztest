@@ -52,6 +52,12 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MatchingTask.cs" />
+    <Compile Include="MultipleChoiceEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MultipleChoiceEditor.Designer.cs">
+      <DependentUpon>MultipleChoiceEditor.cs</DependentUpon>
+    </Compile>
     <Compile Include="MultipleChoiceTask.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -63,9 +69,13 @@
     <Compile Include="TestEditorForm.Designer.cs">
       <DependentUpon>TestEditorForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="TestSession.cs" />
     <Compile Include="WritingTask.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MultipleChoiceEditor.resx">
+      <DependentUpon>MultipleChoiceEditor.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

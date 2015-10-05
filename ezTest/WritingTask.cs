@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace ezTest {
-    class WritingTask :BaseTask {
+    [Serializable]
+    public class WritingTask : BaseTask {
         public string RightAnswer { get; set; }
 
         public WritingTask() {
