@@ -26,6 +26,7 @@ namespace ezTest {
         private void button1_Click(object sender, EventArgs e) {
             BaseTask taskToAdd = null;
             if (radioButton1.Checked) taskToAdd = MultipleChoiceEditor.ShowEditor(null);
+            else if (radioButton2.Checked) taskToAdd = RightOrderEditor.ShowEditor(null);
             if (taskToAdd != null) {
                 editTest.Tasks.Add(taskToAdd);
                 dataGridView1.Rows.Add(taskToAdd.TypeToText(), taskToAdd.TaskText);
@@ -38,6 +39,8 @@ namespace ezTest {
                 BaseTask taskToEdit = editTest.Tasks[selIndex];
                 if (taskToEdit.Type == BaseTask.TaskType.MULTIPLE_CHOICE) 
                     taskToEdit = MultipleChoiceEditor.ShowEditor((MultipleChoiceTask)taskToEdit);
+                else if (taskToEdit.Type == BaseTask.TaskType.RIGHT_ORDER)
+                    taskToEdit = RightOrderEditor.ShowEditor((RightOrderTask)taskToEdit);
                 if (taskToEdit != null) {
                     editTest.Tasks[selIndex] = taskToEdit;
                     dataGridView1.Rows[selIndex].Cells[1].Value = taskToEdit.TaskText;
@@ -47,7 +50,7 @@ namespace ezTest {
 
         private void button3_Click(object sender, EventArgs e) {
             if (dataGridView1.SelectedRows.Count != 0) {
-                int selIndex = dataGridView1.SelectedRows[0].Index; ;
+                int selIndex = dataGridView1.SelectedRows[0].Index;
                 editTest.Tasks.RemoveAt(selIndex);
                 dataGridView1.Rows.RemoveAt(selIndex);
             }
